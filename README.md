@@ -1,121 +1,122 @@
-📊 Sistema de Encuestas – Java (Swing)
+# 📊 Sistema de Encuestas – Java Swing
 
-Aplicación de escritorio desarrollada en Java que permite crear, administrar y analizar encuestas, con manejo de roles, persistencia de datos y visualización gráfica de resultados.
-El objetivo del proyecto es simular un sistema real de gestión y análisis de encuestas, aplicando buenas prácticas de diseño y separación de responsabilidades.
+> Aplicación de escritorio para crear, gestionar y analizar encuestas, desarrollada en Java con interfaz gráfica usando Swing.
 
-🚀 Funcionalidades principales
-👤 Gestión de roles
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=java&logoColor=white)
+![Desktop](https://img.shields.io/badge/Desktop-App-blue)
+![Status](https://img.shields.io/badge/Status-Completed-success)
 
-Administrador
+---
 
-Crear, modificar y eliminar encuestas
+## 🧠 ¿Qué es este proyecto?
 
-Administrar preguntas y respuestas
+Este proyecto implementa un **sistema de encuestas** con:
+- Gestión de encuestas, preguntas y respuestas
+- Varios roles de usuario
+- Persistencia de datos
+- Reportes y gráficos estadísticos
 
-Visualizar resultados y resúmenes gráficos
+El objetivo es simular una aplicación realista, aplicando buenas prácticas de arquitectura y diseño orientado a objetos. :contentReference[oaicite:1]{index=1}
 
-Promotor
+---
 
-Acceder a encuestas disponibles
+## 🚀 Funcionalidades principales
 
-Responder encuestas
+### 👤 Roles
+- **Administrador**
+  - Crear, editar y eliminar encuestas
+  - Administrar preguntas y respuestas
+  - Visualizar resultados
+- **Promotor**
+  - Acceder y responder encuestas
+- **Usuario**
+  - Responder encuestas
 
-Usuario
+### 📝 Encuestas y Respuestas
+- Soporte para preguntas de opción múltiple y texto libre
+- Validaciones:
+  - Si una encuesta ya tiene respuestas asociadas, solo se permite editar el título
+- Registro de respuestas con fecha de realización
 
-Registrar respuestas a encuestas
+### 📈 Reportes
+- Conteo de respuestas por pregunta
+- Visualización mediante gráficos de:
+  - Barras
+  - Circulares
+- Filtros por encuesta y rango de fechas
 
-📝 Gestión de encuestas
+---
 
-Creación de encuestas con múltiples preguntas
-
-Soporte para:
-
-Respuestas predeterminadas
-
-Respuestas de texto libre
-
-Validación:
-
-Si una encuesta tiene respuestas asociadas, solo se permite modificar el título
-
-Registro de respuestas con fecha de realización
-
-📈 Reportes y gráficos
-
-Resumen de resultados por encuesta
-
-Conteo de respuestas por pregunta
-
-Visualización mediante:
-
-Gráficos de barras
-
-Gráficos circulares (según tipo de pregunta)
-
-Filtros por:
-
-Encuesta
-
-Rango de fechas
-
-🏗️ Arquitectura
-
-El proyecto está organizado siguiendo una estructura en capas:
-
+## 🏗️ Arquitectura del proyecto
 UI (Swing)
-Interfaces gráficas separadas por rol
+└── Service
+└── DAO
+└── Data Source
 
-Service
-Lógica de negocio y validaciones
 
-DAO
-Acceso a datos y persistencia
+Separación clara entre:
+- Interfaz gráfica (presentación)
+- Lógica de negocio
+- Persistencia de datos
 
-Interfaces
-Desacoplamiento y mejor mantenibilidad
+Este enfoque facilita mantenimiento y futuras migraciones (por ejemplo, a una versión web). :contentReference[oaicite:2]{index=2}
 
-Este enfoque facilita la escalabilidad del sistema y una futura migración a una aplicación web.
+---
 
-🛠️ Tecnologías utilizadas
+## 🛠️ Stack tecnológico
 
-Java
+- Java  
+- Swing (GUI)  
+- DAO / Service Pattern  
+- Programación Orientada a Objetos  
 
-Swing (interfaz gráfica)
+---
 
-DAO / Service Pattern
+## 📁 Estructura recomendada
+sistemaDeEncuesta/
+├── src/
+├── bd/ # Base de datos o scripts SQL
+├── libs/ # Bibliotecas externas necesarias
+├── README.md
+├── .gitignore
+├── docs/ # Documentación adicional (opcional)
+│ ├── diagrams/
+│ └── screenshots/
 
-POO
 
-Gráficos estadísticos para visualización de datos
+---
 
-🎯 Objetivo del proyecto
+## ▶️ Cómo ejecutar
 
-Aplicar conceptos de:
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/almipo/sistemaDeEncuesta.git
 
-Programación orientada a objetos
+Abrir el proyecto con IntelliJ IDEA
 
-Diseño en capas
+Ejecutar la clase principal (main) desde el IDE
 
-Manejo de datos y reportes
+🧪 Casos de uso cubiertos
 
-Desarrollar una aplicación realista, más cercana a un entorno productivo que a un ejemplo académico.
+Edición restringida de encuestas ya respondidas
 
-📌 Posibles mejoras futuras
+Respuestas libres y predefinidas
 
-Migración a aplicación web (Spring Boot + Frontend)
+Reportes por pregunta
 
-Autenticación con usuarios y contraseñas
+Filtros por encuesta y rango de fechas
 
-Exportación de resultados (PDF / Excel)
+🔮 Roadmap (mejoras posibles)
 
-Dashboard más avanzado
+ Migrar a aplicación web (Spring Boot + Frontend moderno)
 
-📷 Capturas de pantalla
+ Autenticación por usuario/contraseña
 
-(opcional, pero muy recomendado para GitHub)
+ Exportación de resultados (PDF / Excel)
+
+ Exportar dashboards interactivos
 
 👨‍💻 Autor
 
-Alan
-Estudiante de Sistemas
-Proyecto académico con enfoque profesional
+Alan – Estudiante de Sistemas
+Proyecto académico con foco profesional y orientado a buenas prácticas.
