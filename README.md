@@ -8,7 +8,7 @@
 
 ---
 
-## 🧠 ¿Qué es este proyecto?
+##  ¿Qué es este proyecto?
 
 Este proyecto implementa un **sistema de encuestas** con:
 - Gestión de encuestas, preguntas y respuestas
@@ -20,9 +20,9 @@ El objetivo es simular una aplicación realista, aplicando buenas prácticas de 
 
 ---
 
-## 🚀 Funcionalidades principales
+## Funcionalidades principales
 
-### 👤 Roles
+###  Roles
 - **Administrador**
   - Crear, editar y eliminar encuestas
   - Administrar preguntas y respuestas
@@ -32,13 +32,13 @@ El objetivo es simular una aplicación realista, aplicando buenas prácticas de 
 - **Usuario**
   - Responder encuestas
 
-### 📝 Encuestas y Respuestas
+###  Encuestas y Respuestas
 - Soporte para preguntas de opción múltiple y texto libre
 - Validaciones:
   - Si una encuesta ya tiene respuestas asociadas, solo se permite editar el título
 - Registro de respuestas con fecha de realización
 
-### 📈 Reportes
+### Reportes
 - Conteo de respuestas por pregunta
 - Visualización mediante gráficos de:
   - Barras
@@ -47,13 +47,13 @@ El objetivo es simular una aplicación realista, aplicando buenas prácticas de 
 
 ---
 
-## 🏗️ Arquitectura del proyecto
+##  Arquitectura del proyecto
+```
 UI (Swing)
 └── Service
 └── DAO
 └── Data Source
-
-
+```
 Separación clara entre:
 - Interfaz gráfica (presentación)
 - Lógica de negocio
@@ -63,7 +63,7 @@ Este enfoque facilita mantenimiento y futuras migraciones (por ejemplo, a una ve
 
 ---
 
-## 🛠️ Stack tecnológico
+##  Stack tecnológico
 
 - Java  
 - Swing (GUI)  
@@ -72,21 +72,9 @@ Este enfoque facilita mantenimiento y futuras migraciones (por ejemplo, a una ve
 
 ---
 
-## 📁 Estructura recomendada
-sistemaDeEncuesta/
-├── src/
-├── bd/ # Base de datos o scripts SQL
-├── libs/ # Bibliotecas externas necesarias
-├── README.md
-├── .gitignore
-├── docs/ # Documentación adicional (opcional)
-│ ├── diagrams/
-│ └── screenshots/
 
 
----
-
-## ▶️ Cómo ejecutar
+## Cómo ejecutar
 
 1. Clonar el repositorio:
    ```bash
@@ -106,7 +94,7 @@ Reportes por pregunta
 
 Filtros por encuesta y rango de fechas
 
-🔮 Roadmap (mejoras posibles)
+ Roadmap (mejoras posibles)
 
  Migrar a aplicación web (Spring Boot + Frontend moderno)
 
@@ -116,7 +104,7 @@ Filtros por encuesta y rango de fechas
 
  Exportar dashboards interactivos
 
-👨‍💻 Autor
+ Autor
 
 Alan – Estudiante de Sistemas
 Proyecto académico con foco profesional y orientado a buenas prácticas.
