@@ -5,18 +5,21 @@ import presentation.paneles.usuarios.PanelesCrudUsuario.PanelBuscar;
 import presentation.paneles.usuarios.PanelesCrudUsuario.PanelCrear;
 import presentation.paneles.usuarios.PanelesCrudUsuario.PanelEliminar;
 import presentation.paneles.usuarios.PanelesCrudUsuario.PanelModificar;
+import service.IUsuarioService;
 import service.ServiceException;
+import service.usuariosServices.UsuarioService;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.util.ArrayList;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
 
 public class PanelUsuario extends JPanel {
     private JPanel panelCampos;
     private JComboBox<String> comboRolesFiltro;
-    private final service.UsuarioService usuarioService = new service.UsuarioService();
+    private final IUsuarioService usuarioService = new UsuarioService();
 
     public PanelUsuario() {
         setLayout(new BorderLayout(10, 10));
@@ -128,9 +131,14 @@ public class PanelUsuario extends JPanel {
 
         String filtro = (String) comboRolesFiltro.getSelectedItem();
 
-        List<Usuario> usuarios = usuarioService.listarUsuarios(filtro);
 
-
+        List<Usuario> usuarios = new ArrayList<>();
+        try {
+            usuarios = usuarioService.listarUsuarios(filtro);
+        } catch (ServiceException e) {
+            JOptionPane.showMessageDialog(this, "Error al listar usuarios: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
         String[] columnas = {"ID", "Nombre", "Apellido", "DNI", "Rol"};
 
 

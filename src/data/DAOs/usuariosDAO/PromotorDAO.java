@@ -1,8 +1,9 @@
-package data.DAOs;
+package data.DAOs.usuariosDAO;
 
 
 
-import data.Model.Administrador;
+import data.DAOs.DAOException;
+import data.DAOs.IUsuarioDAO;
 import data.Model.Promotor;
 import data.Model.Rol;
 import data.Model.Usuario;
@@ -265,4 +266,4 @@ public class PromotorDAO implements IUsuarioDAO {
 
 
 
-}//end class
+}

@@ -3,6 +3,9 @@ package presentation;
 import java.awt.*;
 import java.awt.event.*;
 import presentation.paneles.*;
+    import presentation.paneles.administrador.PanelAdministrador;
+    import presentation.paneles.dashboard.PanelDashboard;
+    import presentation.paneles.promotor.PanelPromotor;
     import presentation.paneles.usuarios.PanelUsuario;
 
 
@@ -41,10 +44,13 @@ public class Principal extends JFrame implements ActionListener {
                     panelDerecho.add(new PanelUsuario(), BorderLayout.CENTER);
                     break;
                 case "ADMIN":
-                    panelDerecho.add(new JLabel("Panel Administrador (a implementar)"), BorderLayout.CENTER);
+                    panelDerecho.add(new PanelAdministrador(), BorderLayout.CENTER);
                     break;
                 case "PROMOTOR":
-                    panelDerecho.add(new JLabel("Panel Promotor (a implementar)"), BorderLayout.CENTER);
+                    panelDerecho.add(new PanelPromotor(), BorderLayout.CENTER);
+                    break;
+                case "DASHBOARD":
+                    panelDerecho.add(new PanelDashboard(), BorderLayout.CENTER);
                     break;
             }
 

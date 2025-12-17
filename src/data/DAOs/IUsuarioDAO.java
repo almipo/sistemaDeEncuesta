@@ -1,18 +1,13 @@
 package data.DAOs;
-
-import data.Model.Administrador;
 import data.Model.Usuario;
-
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 
 public  interface IUsuarioDAO {
-    public void crear(Usuario usuario) throws SQLException ;
+    public void crear(Usuario usuario) throws DAOException ;
+    public void modificar(Usuario usuario) throws DAOException ;
+    public void eliminar(int id) throws DAOException ;
+    public Usuario buscar(int id) throws DAOException ;
+    public ArrayList buscarTodos() throws DAOException ;
 
-
-    public void modificar(Usuario usuario) ;
-    public void eliminar(int id) ;
-    public Usuario buscar(int id);
-    public ArrayList buscarTodos();
 }

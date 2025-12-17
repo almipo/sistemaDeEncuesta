@@ -1,6 +1,7 @@
 package presentation.paneles.usuarios.PanelesCrudUsuario;
 import data.Model.Usuario;
-import service.UsuarioService;
+import service.IUsuarioService;
+import service.usuariosServices.UsuarioService;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,10 +10,10 @@ public class PanelBuscar extends JPanel {
     private JTextField tfBuscarId = new JTextField(15);
     private JButton btnEjecutarBuscar = new JButton("Buscar Usuario");
 
-    private UsuarioService usuarioService;
+    private IUsuarioService usuarioService;
     private JPanel resultadoPanel = new JPanel();
 
-    public PanelBuscar(UsuarioService usuarioService) {
+    public PanelBuscar(IUsuarioService usuarioService) {
         this.usuarioService = usuarioService;
         setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();

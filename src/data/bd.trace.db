@@ -1,6 +1,0 @@
-2025-06-05 10:33:34.844159-03:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USUARIO" not found (this database is empty); SQL statement:
-select *  from usuario [42104-232]
-2025-06-05 10:33:35.846928-03:00 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USUARIO" not found (this database is empty); SQL statement:
-select *  from usuario [42104-232]

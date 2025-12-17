@@ -1,20 +1,21 @@
 package presentation.paneles.usuarios.PanelesCrudUsuario;
 import data.Model.Usuario;
-import service.UsuarioService;
+import service.IUsuarioService;
+import service.usuariosServices.UsuarioService;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class PanelEliminar extends JPanel {
 
-    private final UsuarioService usuarioService; // lo recibes para usar el servicio
+    private final IUsuarioService usuarioService; // lo recibes para usar el servicio
 
     private JTextField tfIdEliminar;
     private JLabel lblDatosEliminar;
     private JButton btnEjecutarEliminar;
     private Usuario usuarioEncontrado;
 
-    public PanelEliminar(UsuarioService usuarioService) {
+    public PanelEliminar(IUsuarioService usuarioService) {
         this.usuarioService = usuarioService;
         inicializarComponentes();
     }

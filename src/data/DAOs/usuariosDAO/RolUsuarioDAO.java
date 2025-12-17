@@ -1,4 +1,4 @@
-package data.DAOs;
+package data.DAOs.usuariosDAO;
 
 
 import data.Model.Rol;
@@ -143,7 +143,7 @@ public class RolUsuarioDAO {
 
         try {
             con = Conexion.getConexion();
-            pStmt = con.prepareStatement("DELETE FROM rol WHERE id = ?");
+            pStmt = con.prepareStatement("DELETE FROM rolusuario WHERE id = ?");
             pStmt.setInt(1, id);
 
             int filasAfectadas = pStmt.executeUpdate();
@@ -172,7 +172,7 @@ public class RolUsuarioDAO {
         PreparedStatement pStmt = null;
         try {
             con = Conexion.getConexion();
-            pStmt = con.prepareStatement("UPDATE rol SET descripcion = ? WHERE id = ?");
+            pStmt = con.prepareStatement("UPDATE rolusuario SET descripcion = ? WHERE id = ?");
             pStmt.setString(1, this.descripcion);
             pStmt.setInt(2, id);
 

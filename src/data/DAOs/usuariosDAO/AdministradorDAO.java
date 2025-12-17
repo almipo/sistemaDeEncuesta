@@ -1,6 +1,8 @@
-package data.DAOs;
+package data.DAOs.usuariosDAO;
 
 
+import data.DAOs.DAOException;
+import data.DAOs.IUsuarioDAO;
 import data.Model.Rol;
 import data.Model.Usuario;
 import data.Model.Administrador;
@@ -23,7 +25,7 @@ public class AdministradorDAO implements IUsuarioDAO {
     @Override
     public  void crear(Usuario usuario) {
 
-            verificarAdministrador(usuario);
+        verificarAdministrador(usuario);
         Connection con= null;
         PreparedStatement pStmt = null;
 

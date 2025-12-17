@@ -8,7 +8,7 @@ import java.sql.*;
 public final class Conexion {
 
      private static final String DB_JDBC_DRIVER = "org.h2.Driver";
-     private static final String URL = "jdbc:h2:file:C:/Users/ALAN/IdeaProjects/Encuesta/src/data/bd/bd";
+     private static final String URL = "jdbc:h2:tcp://localhost/C:/Users/ALAN/IdeaProjects/Encuesta/bd/Encuesta";
      private static final String USUARIO = "sa";
      private static final String CONTRASEÑA = "";
 
@@ -27,7 +27,7 @@ public final class Conexion {
          Connection con = null;
          try {
              con = DriverManager.getConnection(URL, USUARIO, CONTRASEÑA);
-             System.out.println("Conexión establecida");
+            // System.out.println("Conexión establecida");
              return con;
 
          } catch (SQLException e) {
@@ -124,7 +124,7 @@ public final class Conexion {
          if (con != null) {
              try {
                  con.close();
-                 System.out.println("conexion cerrada");
+                 //System.out.println("conexion cerrada");
              } catch (SQLException e) {
                  System.out.println("Error al cerrar la conexión");
                  e.printStackTrace();

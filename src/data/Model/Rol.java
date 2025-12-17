@@ -5,6 +5,7 @@ public class Rol {
     private String rol;
 
 
+
     public Rol() {
     }
 

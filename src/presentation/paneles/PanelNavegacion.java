@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class PanelNavegacion extends JPanel {
-    public JButton btnAdmin, btnPromotor, btnUsuario;
+    public JButton btnAdmin, btnPromotor, btnUsuario, btnDashboard;
     private JButton botonSeleccionado = null;
 
     public PanelNavegacion(ActionListener listener) {
@@ -16,21 +16,27 @@ public class PanelNavegacion extends JPanel {
         btnAdmin = crearBoton("Administrador");
         btnPromotor = crearBoton("Promotor");
         btnUsuario = crearBoton("Usuario");
+        btnDashboard = crearBoton("Dashboard");
+
 
         btnAdmin.setActionCommand("ADMIN");
         btnPromotor.setActionCommand("PROMOTOR");
         btnUsuario.setActionCommand("USUARIO");
+        btnDashboard.setActionCommand("DASHBOARD");
 
         add(btnAdmin);
         add(Box.createRigidArea(new Dimension(0, 30))); // Espacio entre botones
         add(btnPromotor);
         add(Box.createRigidArea(new Dimension(0, 30)));
         add(btnUsuario);
+        add(Box.createRigidArea(new Dimension(0, 30)));
+        add(btnDashboard);
 
         // Enlazamos todos los botones al mismo listener externo
         btnAdmin.addActionListener(listener);
         btnPromotor.addActionListener(listener);
         btnUsuario.addActionListener(listener);
+        btnDashboard.addActionListener(listener);
 
     }
 

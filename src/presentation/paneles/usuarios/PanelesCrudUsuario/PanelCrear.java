@@ -1,5 +1,6 @@
 package presentation.paneles.usuarios.PanelesCrudUsuario;
-import service.UsuarioService;
+import service.IUsuarioService;
+import service.usuariosServices.UsuarioService;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,9 +12,9 @@ public class PanelCrear extends JPanel {
     private JComboBox<String> cbRolCrear = new JComboBox<>(new String[]{"Administrador", "Promotor"});
     private JButton btnEjecutarCrear = new JButton("Crear Usuario");
 
-    private UsuarioService usuarioService; // inyectar o pasar en constructor
+    private IUsuarioService usuarioService;
 
-    public PanelCrear(UsuarioService usuarioService) {
+    public PanelCrear(IUsuarioService usuarioService) {
         this.usuarioService = usuarioService;
         setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();

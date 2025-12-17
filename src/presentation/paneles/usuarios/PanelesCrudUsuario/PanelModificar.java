@@ -1,6 +1,7 @@
 package presentation.paneles.usuarios.PanelesCrudUsuario;
 import data.Model.Usuario;
-import service.UsuarioService;
+import service.IUsuarioService;
+import service.usuariosServices.UsuarioService;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
@@ -8,7 +9,7 @@ import javax.swing.event.DocumentListener;
 import java.awt.*;
 
 public class PanelModificar extends JPanel {
-    private UsuarioService usuarioService;
+    private IUsuarioService usuarioService;
 
     private JTextField tfIdModificar = new JTextField(10);
     private JButton btnBuscar = new JButton("Buscar usuario");
@@ -26,7 +27,7 @@ public class PanelModificar extends JPanel {
     private final String[] apellidoOriginal = {""};
     private final String[] dniOriginal = {""};
 
-    public PanelModificar(UsuarioService usuarioService) {
+    public PanelModificar(IUsuarioService usuarioService) {
         this.usuarioService = usuarioService;
 
         setLayout(new BorderLayout());
