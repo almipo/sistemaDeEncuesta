@@ -41,7 +41,6 @@ El objetivo es simular una aplicación realista, aplicando buenas prácticas de 
 ### Reportes
 - Conteo de respuestas por pregunta
 - Visualización mediante gráficos de:
-  - Barras
   - Circulares
 - Filtros por encuesta y rango de fechas
 
