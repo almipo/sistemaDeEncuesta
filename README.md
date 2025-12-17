@@ -83,7 +83,9 @@ Abrir el proyecto con IntelliJ IDEA
 
 Ejecutar la clase principal (main) desde el IDE
 
-🧪 Casos de uso cubiertos
+---
+
+ Casos de uso cubiertos
 
 Edición restringida de encuestas ya respondidas
 
@@ -92,6 +94,8 @@ Respuestas libres y predefinidas
 Reportes por pregunta
 
 Filtros por encuesta y rango de fechas
+
+---
 
  Roadmap (mejoras posibles)
 
@@ -102,6 +106,8 @@ Filtros por encuesta y rango de fechas
  Exportación de resultados (PDF / Excel)
 
  Exportar dashboards interactivos
+ 
+ ---
 
  Autor
 
